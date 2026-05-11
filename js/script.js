@@ -32,24 +32,86 @@ const galleryImages = document.querySelectorAll(".portrait-gallery img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
+function openLightbox(image) {
+
+  lightbox.style.display = "flex";
+
+  lightboxImg.src = image.src;
+  lightboxImg.alt = image.alt;
+
+  zoomLevel = 1;
+  lightboxImg.style.transform = "scale(1)";
+
+}
+
+function closeLightbox() {
+  lightbox.style.display = "none";
+}
+
 if (lightbox && lightboxImg) {
 
   galleryImages.forEach(image => {
 
     image.addEventListener("click", () => {
 
-      lightbox.style.display = "flex";
+      openLightbox(image);
 
-      lightboxImg.src = image.src;
-      lightboxImg.alt = image.alt;
+    });
+
+    image.addEventListener("keydown", (event) => {
+
+      if (event.key === "Enter" || event.key === " ") {
+
+        event.preventDefault();
+        image.click();
+
+      }
 
     });
 
   });
 
-lightbox.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
+  // Click outside image closes lightbox
+  lightbox.addEventListener("click", closeLightbox);
+
+  // Escape key closes lightbox
+  document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
+
+  });
+
+}
+
+// LIGHTBOX ZOOM
+
+let zoomLevel = 1;
+
+if (lightboxImg) {
+
+  lightboxImg.addEventListener("wheel", (event) => {
+
+    event.preventDefault();
+
+    // Zoom in
+    if (event.deltaY < 0) {
+      zoomLevel += 0.1;
+    }
+
+    // Zoom out
+    else {
+      zoomLevel -= 0.1;
+    }
+
+    // Prevent too much zoom, Clamp it between 1 and 3.5
+    zoomLevel = Math.min(Math.max(1, zoomLevel), 3.5);
+
+    // Apply zoom
+    lightboxImg.style.transform = `scale(${zoomLevel})`;
+
+  });
 
 }
 
@@ -89,9 +151,12 @@ window.addEventListener("scroll", () => {
 
     header.classList.add("hide");
 
-    //Close mobile menu
-    mobileNav.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
+    //Close mobile menu safely
+    if (mobileNav && menuToggle) {
+
+      mobileNav.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
 
   } else {
 
@@ -103,4 +168,4 @@ window.addEventListener("scroll", () => {
   // Save current position
   lastScrollY = currentScrollY;
 
-});
+  });
