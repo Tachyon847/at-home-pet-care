@@ -42,14 +42,25 @@ nav a:hover {
 
 button,
 .hero-button {
-  display: inline-block;
-  text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  border: none;
   background: #0077ff;
   color: white;
+  border: 1px solid #0066dd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+   transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
   border-radius: 8px;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+}
+
+.hero-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  background: #006be6;
 }
 
 /* Base styles */
@@ -124,7 +135,8 @@ header h2 {
   margin-bottom: 1.5rem;
   padding: 1rem;
   border-radius: 10px;
-  background: #f5f7fa;
+  background: #f2f2f0;
+  border: 1px solid #e7e7e3;
 }
 
 .service-toggle {
@@ -132,9 +144,12 @@ header h2 {
   padding: 1rem;
   font-size: 1.1rem;
   color: #333;
-  background: #f5f7fa;
+  background: #f7f8fa;
   border: none;
   border-radius: 10px;
+  box-shadow: 
+    inset 0 1px 0 rgba(255,255,255,0.45),
+    0 4px 10px rgba(0,0,0,0.05);
   cursor: pointer;
 
   display: flex;
@@ -142,11 +157,23 @@ header h2 {
   text-align: center;
   align-items: center;
 
-  transition: background 0.2s ease;
+  transition:
+    background 0.2s ease, 
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .service-toggle:hover {
-  background: #e9eef5;
+  background: #fbfcfe;
+  transform: translateY(-1.5px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.45),
+    0 8px 18px rgba(0,0,0,0.07);
+}
+
+.service-toggle:focus-visible {
+  outline: 2px solid rgba(0,0,0,0.35);
+  outline-offset: 2px;
 }
 
 .service-title {
@@ -208,7 +235,6 @@ header h2 {
   padding: 0.65rem 1.2rem;
 
   border: 1px solid #444;
-
   border-radius: 999px;
 
   text-decoration: none;
@@ -220,13 +246,15 @@ header h2 {
   transition:
     background 0.2s ease,
     color 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .gallery-link:hover {
   background: #222;
   color: white;
   transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
 }
 
 .portrait-note {
@@ -293,12 +321,16 @@ header h2 {
 
   transition:
     background 0.2s ease,
-    color 0.2s ease;
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .rover-link:hover {
   background: #222;
   color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
 }
 
 .rover-note {
@@ -328,8 +360,20 @@ header h2 {
   background: #0077ff;
   color: white;
   text-decoration: none;
+  border: 1px solid #0066dd;
   border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
   font-weight: bold;
+}
+
+.contact-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  background: #006be6;
 }
 
 /*Gallery Page*/
@@ -444,6 +488,10 @@ header h2 {
   .mobile-nav.open {
     display: flex;
     margin-left: 0;
+  }
+
+  .service {
+    padding: 0.75rem;
   }
 
   .service-title {
