@@ -1,7 +1,7 @@
 # At Home Pet Care Website
 
 This is a responsive multi-page website created for my small pet care business. 
-This project focused on building trust, clear communication, and a clean user experience across desktop and mobile devices for potential customers.
+This project focused on building trust, clear communication, and a clean user experience for potential customers across desktop and mobile devices.
 The website was built using HTML, CSS, and JavaScript with a focus on responsive design, accessibility, and modern UI practices.
 
 ## Live Site
@@ -19,11 +19,11 @@ https://github.com/Tachyon847/at-home-pet-care
 - Responsive desktop and mobile layouts
 - Mobile hamburger navigation menu
 - Scroll-responsive mobile header behavior
-- Expandable service pricing sections (and hint text to prompt action)
+- Expandable layered service cards with responsive hover and focus states
 - Smooth scrolling navigation
 - Accessibility improvements using ARIA attributes
-- Custom portrait gallery page
-- Interactive image lightbox gallery
+- Custom portrait gallery with interactive lightbox and zoom support
+- Keyboard-accessible gallery interactions
 - GitHub Pages deployment
 
 ---
@@ -52,11 +52,25 @@ The primary goals were to:
 
 ---
 
+## Design Focus
+
+The interface was intentionally designed around:
+- clean visual hierarchy and readable spacing
+- approachable typography and restrained color usage
+- soft layered depth and subtle hover motion
+- responsive layouts optimized for desktop and mobile devices
+- consistency between service pages and portrait gallery presentation
+- accessibility-conscious interaction and focus states
+
+Additional refinement passes focused on improving visual clarity across different screen qualities, brightness levels, and device types while maintaining a calm and professional presentation style.
+
+---
+
 ## Development Notes
 
-This project was designed, developed, and deployed from the ground up in approximately 14–16 hours as an accelerated front-end development refresh and portfolio project.
+This project was designed, developed, and deployed from the ground up in approximately 14–16 hours as an accelerated front-end development refresh and portfolio project, followed by two additional half-days of UI and usability refinement after observing real user interaction patterns.
 
-Modern AI-assisted development tools were used to:
+Modern AI-assisted development tools were incorporated throughout development to:
 - accelerate debugging and troubleshooting
 - research updated front-end development practices
 - improve development workflow efficiency
@@ -74,7 +88,7 @@ Future planned additions and enhancements include:
 - Interactive testimonial carousel with pet photos
 - Contact form integration
 - Booking form integration with spreadsheet and calendar support
-- Additional accessibility and usability refinements (expanded keyboard navigation support)
+- Additional accessibility and usability refinements
 - Expanded portrait gallery with image optimization and compression
 - Custom domain support
   
