@@ -14,6 +14,30 @@ https://github.com/Tachyon847/at-home-pet-care
 
 ---
 
+## Homepage Screenshots
+
+<p>
+  <img src="images/README/DesktopHomepage.png"
+       width="72%"
+       alt="Desktop Homepage"
+       align = "left">
+
+  <img src="images/README/MobileHomepage.png"
+       width="17.85%"
+       alt="Mobile Homepage"
+       align = "right">
+</p>
+
+<br clear="all">
+
+<br>
+
+<p align="center">
+  <em>Homepage layout demonstrating responsive desktop (left) and mobile (right) user experiences.</em>
+</p>
+
+---
+
 ## Features 
 
 - Responsive desktop and mobile layouts 
