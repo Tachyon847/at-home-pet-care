@@ -105,7 +105,7 @@ All implementation decisions, testing, design iteration, deployment, and feature
 
 ## Additional Documentation
 
-Detailed version history, design iterations, and development notes are available in `DEVNOTES.md`.
+Detailed version history, design iterations, and development notes are available in [DEVNOTES](DEVNOTES.md).
 
 --- 
 
